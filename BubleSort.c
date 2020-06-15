@@ -10,7 +10,7 @@ void ChangePos(int *n1, int *n2){
 void BubleSort(int InVector[], int n){
     int i, j;
     for(i = 0; i < n-1; i++){
-        for(j=0; j < n-i-1; j++){
+        for(j=0; j < n-1; j++){
             if(InVector[j] > InVector[j+1])
                 ChangePos(&InVector[j],&InVector[j+1]);
         }
@@ -18,7 +18,7 @@ void BubleSort(int InVector[], int n){
 }
 
 int print_array(int InVector[], int n){
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d ,", InVector[i]);
     }
@@ -28,7 +28,7 @@ int print_array(int InVector[], int n){
 
 int main(int argc, char const *argv[])
 {
-    int InVector[]= {100, 1992, 0, 5, -1, 60, 70, 14, 15, 10};
+    int InVector[]= {2, 1, 0, 1011, -7, 0};
     int n = sizeof(InVector)/sizeof(InVector[0]);
     BubleSort(InVector, n);
     print_array(InVector, n);

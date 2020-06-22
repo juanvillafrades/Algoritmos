@@ -1,7 +1,7 @@
-#include <iostream>
-#include <climits>
-
-int greedyChange(int coinSet, int n, int N){
+#include<iostream>
+#include<climits>
+using namespace std;
+int greedyChange(int coinSet[], int n, int N){
     if(N==0){
         return 0;
     }
@@ -16,4 +16,12 @@ int greedyChange(int coinSet, int n, int N){
     }
     return coins;
 }
+ int main(int argc, char const *argv[])
+ {
+    int coinSet[]={1,5,10,15,20};
+    int n = sizeof(coinSet)/sizeof(coinSet[0]);
+    int N = 50;
+    cout << "El minimo numero de monedas para dar el cambio es: " << greedyChange(coinSet, n, N) <<"\n";
+    return 0;
+ }
  
